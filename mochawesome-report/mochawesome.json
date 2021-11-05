@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-05T16:20:51.755Z",
+    "end": "2021-11-05T16:21:22.553Z",
+    "duration": 30798,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "e4bff86f-4622-46da-9625-a5ce5df807d5",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "c8a4e2f9-c99b-4952-9b55-c93e45bd0170",
+        "title": "Facebook Test",
+        "fullFile": "D:\\Project\\Python\\selenium-automatic-testing\\test\\index.js",
+        "file": "\\test\\index.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "Facebook Test \"before each\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "page = new FacebookTesting(url);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8df6da22-5eb0-45d0-9512-c9c6ccbc2d4c",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "Facebook Test \"after each\" hook",
+            "timedOut": false,
+            "duration": 74,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await page.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "4c7aad04-73c0-402f-ba79-5db270e679b1",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "Login Facebook",
+            "fullTitle": "Facebook Test Login Facebook",
+            "timedOut": false,
+            "duration": 17772,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const result = await page.login(\n  testCase.loginSuccess.input.username,\n  testCase.loginSuccess.input.password\n);\nexpect(result == '').to.equal(true);\nreturn;",
+            "err": {},
+            "isRoot": false,
+            "uuid": "7cfbc49f-7fd3-4bf2-95b1-d4bc91e599b2",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Login Facebook",
+            "fullTitle": "Facebook Test Login Facebook",
+            "timedOut": false,
+            "duration": 5049,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const result = await page.login(\n  testCase.loginFail.input.username,\n  testCase.loginFail.input.password\n);\nexpect(result != '').to.equal(true);\nreturn;",
+            "err": {},
+            "isRoot": false,
+            "uuid": "e024e61c-d8be-4067-b2e7-06d07877a204",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Search Facebook",
+            "fullTitle": "Facebook Test Search Facebook",
+            "timedOut": false,
+            "duration": 7778,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "let result = await page.search('Kien Duy');\nexpect(result.length >= 6).to.equal(true);\nreturn;",
+            "err": {},
+            "isRoot": false,
+            "uuid": "d5579ad5-0497-4b48-adf3-c34ec5dc5751",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "7cfbc49f-7fd3-4bf2-95b1-d4bc91e599b2",
+          "e024e61c-d8be-4067-b2e7-06d07877a204",
+          "d5579ad5-0497-4b48-adf3-c34ec5dc5751"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 30599,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 50000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2021
+}
