@@ -6,21 +6,26 @@ module.exports = {
         username: "njktherapper@gmail.com",
         password: "kien",
       },
-      expected: "password err",
-    },
-    loginNoPassword: {
-      input: {
-        username: "njktherapper@gmail.com",
-        password: "",
-      },
-      expected: "password invalid",
+      expected: true,
     },
     loginSuccess: {
       input: {
         username: "njktherapper@gmail.com",
         password: "kien1234",
       },
-      expected: "success",
+      expected: true,
+    },
+    likePost: {
+      page: {
+        url: "https://www.facebook.com/kien.duy.9659/",
+      },
+      expected: true,
+    },
+    searchQuery: {
+      input: {
+        text: "Kien Duy",
+      },
+      expected: 6,
     },
   },
 };

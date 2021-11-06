@@ -30,7 +30,7 @@ module.exports.facebook = () => {
           testCase.loginSuccess.input.username,
           testCase.loginSuccess.input.password
         );
-        expect(result == '').to.equal(true);
+        expect(result == '').to.equal(testCase.loginSuccess.expected);
         return;
       });
       it("Login Facebook", async () => {
@@ -38,17 +38,17 @@ module.exports.facebook = () => {
           testCase.loginFail.input.username,
           testCase.loginFail.input.password
         );
-        expect(result != '').to.equal(true);
+        expect(result != '').to.equal(testCase.loginFail.expected);
         return;
       });
       it("Search Facebook", async () => {
-        let result = await page.search('Kien Duy');
-        expect(result.length >= 6).to.equal(true);
+        let result = await page.search(testCase.searchQuery.input.text);
+        expect(result.length >= testCase.searchQuery.expected).to.equal(true);
         return;
       });
       it("Like a Post on Facebook", async () => {
-        let result = await page.likePost();
-        expect(result).to.equal(true);
+        let result = await page.likePost(testCase.likePost.page.url);
+        expect(result).to.equal(testCase.likePost.expected);
         return;
       });
     });
