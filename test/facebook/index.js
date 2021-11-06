@@ -46,6 +46,11 @@ module.exports.facebook = () => {
         expect(result.length >= 6).to.equal(true);
         return;
       });
+      it("Like a Post on Facebook", async () => {
+        let result = await page.likePost();
+        expect(result).to.equal(true);
+        return;
+      });
     });
   } catch (e) {
     console.log(new Error(e.message));
